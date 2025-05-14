@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Thi thử GPLX</title>
+</head>
+<body>
+  <h1>Chọn câu hỏi</h1>
+  <ul>
+    {% for q in questions %}
+      <li><a href="{{ url_for('question', id=q.id) }}">Câu {{ q.id }}</a></li>
+    {% endfor %}
+  </ul>
+</body>
+</html>

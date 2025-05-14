@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Câu hỏi {{ id }}</title>
+</head>
+<body>
+  <h2>Câu {{ id }}: {{ q.question }}</h2>
+  <form method="post">
+    {% for opt in q.options %}
+      <label><input type="radio" name="answer" value="{{ loop.index }}"> {{ loop.index }}. {{ opt }}</label><br>
+    {% endfor %}
+    <button type="submit">Tiếp theo</button>
+  </form>
+  <p><a href="{{ url_for('index') }}">Quay lại danh sách</a></p>
+</body>
+</html>
